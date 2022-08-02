@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to right,blue,purple);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.searchBar{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.searchBar .mainSearchBar input{
+  width:250px;
+  height:40px;
+  border-radius:15px;
+  font-weight:bold;
+  font-size:20px;
+  text-indent:10px;
+  filter:drop-shadow(10px 20px 30px black)
+}
+.mainMovie{
+  display:flex;
+  justify-content:center;
+  margin-top:30px;
+}
+.mainMovie .mainBoxs .boxs img{
+  width:300px;
+  height:450px;
+  border-radius:5px;
+  margin-right:20px;
+  transition-duration:0.5;
+  margin-top:30px;
+}
+.mainBoxs{
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+.mainMovie .mainBoxs .boxs img:hover{
+  filter:drop-shadow(10px 20px 30px black);
+  transform:translateY(-20px)
+}
+.movieInfo{
+  background:black;
+  width:300px;
+  height:100px;
+  color:white;
+  font-weight:bold;
+  font-size:30px;
+  border-radius:15px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:absolute;
+  margin-top:-100px;
+  visibility:hidden;
+  opacity:0;
+  transition:visibility 0.4s, opacity 0.4s linear;
+}
+.mainMovie .mainBoxs .boxs img:hover + .movieInfo{
+visibility:visible;
+opacity:1;
+transition:visibility 0.4s, opacity 0.4s linear;
+}
